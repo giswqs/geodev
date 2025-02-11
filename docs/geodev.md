@@ -1,4 +1,0 @@
- 
-# geodev module
-
-::: geodev.geodev
