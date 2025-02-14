@@ -1,7 +1,7 @@
 site_name: geodev
 site_description: A python package for geospatial analysis and mapping
 site_author: giswqs
-site_url: https://giswqs.github.io/geodev
+site_url: https://geodev.gishub.org
 repo_url: https://github.com/giswqs/geodev
 
 copyright: "Copyright &copy; 2024 - 2024 Qiusheng Wu"
@@ -80,7 +80,8 @@ nav:
     - Changelog: changelog.md
     - Report Issues: https://github.com/giswqs/geodev/issues
     - Examples:
-        - examples/intro.ipynb
+          - examples/intro.ipynb
+          - examples/map.ipynb
     - API Reference:
           - geodev module: geodev.md
           - common module: common.md
