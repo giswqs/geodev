@@ -14,9 +14,9 @@ mkdocs-git-revision-date-plugin
 mkdocs-jupyter>=0.24.0
 mkdocs-material>=9.1.3
 mkdocs-pdf-export-plugin
-mkdocstrings
+mkdocstrings==0.28.2
 mkdocstrings-crystal
-mkdocstrings-python==1.16.2
+mkdocstrings-python-legacy
 nbconvert
 nbformat
 pygments
