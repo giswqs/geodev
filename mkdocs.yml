@@ -81,6 +81,7 @@ nav:
     - Report Issues: https://github.com/giswqs/geodev/issues
     - Examples:
           - examples/intro.ipynb
+          - examples/folium.ipynb
           - examples/map.ipynb
     - API Reference:
           - geodev module: geodev.md
