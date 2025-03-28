@@ -85,3 +85,4 @@ nav:
     - API Reference:
           - geodev module: geodev.md
           - common module: common.md
+          - foliumap module: foliumap.md
