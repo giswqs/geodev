@@ -1,6 +1,7 @@
 """This module provides a custom Map class that extends folium.Map"""
 
 import folium
+import folium.plugins
 
 
 class Map(folium.Map):
@@ -98,3 +99,29 @@ class Map(folium.Map):
     def add_layer_control(self):
         """Adds a layer control widget to the map."""
         folium.LayerControl().add_to(self)
+
+    def add_split_map(self, left="openstreetmap", right="cartodbpositron", **kwargs):
+
+        # map_types = {
+        #     "ROADMAP": "m",
+        #     "SATELLITE": "s",
+        #     "HYBRID": "y",
+        #     "TERRAIN": "p",
+        # }
+
+        # map_type = map_types[map_type.upper()]
+
+        # url = (
+        #     f"https://mt1.google.com/vt/lyrs={map_type.lower()}&x={{x}}&y={{y}}&z={{z}}"
+        # )
+
+        layer_right = folium.TileLayer(left, **kwargs)
+        layer_left = folium.TileLayer(right, **kwargs)
+
+        sbs = folium.plugins.SideBySideLayers(
+            layer_left=layer_left, layer_right=layer_right
+        )
+
+        layer_left.add_to(self)
+        layer_right.add_to(self)
+        sbs.add_to(self)
