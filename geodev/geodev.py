@@ -128,3 +128,57 @@ class Map(ipyleaflet.Map):
         """Adds a layer control widget to the map."""
         control = ipyleaflet.LayersControl(position="topright")
         self.add_control(control)
+
+    def add_raster(self, filepath, **kwargs):
+
+        from localtileserver import TileClient, get_leaflet_tile_layer
+
+        client = TileClient(filepath)
+        tile_layer = get_leaflet_tile_layer(client, **kwargs)
+
+        self.add(tile_layer)
+        self.center = client.center()
+        self.zoom = client.default_zoom
+
+    def add_image(self, image, bounds=None, **kwargs):
+        """Adds an image to the map.
+
+        Args:
+            image (str): The file path to the image.
+            bounds (list, optional): The bounds for the image. Defaults to None.
+            **kwargs: Additional keyword arguments for the ipyleaflet.ImageOverlay layer.
+        """
+
+        if bounds is None:
+            bounds = [[-90, -180], [90, 180]]
+        overlay = ipyleaflet.ImageOverlay(url=image, bounds=bounds, **kwargs)
+        self.add(overlay)
+
+    def add_video(self, video, bounds=None, **kwargs):
+        """Adds a video to the map.
+
+        Args:
+            video (str): The file path to the video.
+            bounds (list, optional): The bounds for the video. Defaults to None.
+            **kwargs: Additional keyword arguments for the ipyleaflet.VideoOverlay layer.
+        """
+
+        if bounds is None:
+            bounds = [[-90, -180], [90, 180]]
+        overlay = ipyleaflet.VideoOverlay(url=video, bounds=bounds, **kwargs)
+        self.add(overlay)
+
+    def add_wms_layer(
+        self, url, layers, format="image/png", transparent=True, **kwargs
+    ):
+        """Adds a WMS layer to the map.
+
+        Args:
+            url (str): The WMS service URL.
+            layers (str): The layers to display.
+            **kwargs: Additional keyword arguments for the ipyleaflet.WMSLayer layer.
+        """
+        layer = ipyleaflet.WMSLayer(
+            url=url, layers=layers, format=format, transparent=transparent, **kwargs
+        )
+        self.add(layer)
