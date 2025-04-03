@@ -12,13 +12,13 @@
         <meta name="author" content="giswqs">
       
       
-        <link rel="canonical" href="https://geodev.gishub.org/examples/map/">
+        <link rel="canonical" href="https://geodev.gishub.org/examples/split_map/">
       
       
-        <link rel="prev" href="../folium/">
+        <link rel="prev" href="../map/">
       
       
-        <link rel="next" href="../split_map/">
+        <link rel="next" href="../../geodev/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Map - geodev</title>
+        <title>Split map - geodev</title>
       
     
     
@@ -81,11 +81,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#create-interactive-maps" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -118,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Map
+              Split map
             
           </span>
         </div>
@@ -506,19 +501,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../map/" class="md-nav__link">
         
   
   
@@ -529,7 +515,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -539,10 +524,17 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../split_map/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -553,6 +545,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -696,8 +689,6 @@
   
   
   
-    
-  
   
 </nav>
                   </div>
@@ -710,7 +701,7 @@
               <article class="md-content__inner md-typeset">
                 
 
-    <a href="/examples/map/map.ipynb" title="Download Notebook" class="md-content__button md-icon">
+    <a href="/examples/split_map/split_map.ipynb" title="Download Notebook" class="md-content__button md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7z"/></svg>
     </a>
 
@@ -722,6 +713,8 @@
   
   
 
+
+  <h1>Split map</h1>
 
 <script>
 (function (global, factory) {
@@ -1159,17 +1152,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </style>
 <!-- End of mermaid configuration --><div class="jupyter-wrapper">
 <div class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="create-interactive-maps">Create interactive maps<a class="anchor-link" href="#create-interactive-maps">¶</a></h1><p><a href="https://colab.research.google.com/github/giswqs/geodev/blob/main/docs/examples/map.ipynb"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg"/></a></p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -1188,16 +1171,16 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">geodev</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">leafmap.foliumap</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">leafmap</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-1">import geodev</div>
+<div class="clipboard-copy-txt" id="cell-1">import leafmap.foliumap as leafmap</div>
 </div>
 </div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -1215,36 +1198,17 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">geodev.common</span><span class="w"> </span><span class="kn">import</span> <span class="n">hello_world</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="n">leafmap</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="n">center</span><span class="o">=</span><span class="p">[</span><span class="mf">39.4948</span><span class="p">,</span> <span class="o">-</span><span class="mf">108.5492</span><span class="p">],</span> <span class="n">zoom</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s2">"https://github.com/opengeos/data/releases/download/raster/Libya-2023-07-01.tif"</span>
+<span class="n">url2</span> <span class="o">=</span> <span class="s2">"https://github.com/opengeos/data/releases/download/raster/Libya-2023-09-13.tif"</span>
+<span class="n">m</span><span class="o">.</span><span class="n">split_map</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">url2</span><span class="p">)</span>
+<span class="n">m</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-2">from geodev.common import hello_world</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-3">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">hello_world</span><span class="p">()</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-3">hello_world()</div>
+<div class="clipboard-copy-txt" id="cell-2">m = leafmap.Map(height=600, center=[39.4948, -108.5492], zoom=12)
+url = "https://github.com/opengeos/data/releases/download/raster/Libya-2023-07-01.tif"
+url2 = "https://github.com/opengeos/data/releases/download/raster/Libya-2023-09-13.tif"
+m.split_map(url, url2)
+m</div>
 </div>
 </div>
 </div>
@@ -1253,11 +1217,284 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Hello World!
-</pre>
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[2]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<iframe "allowfullscreen"="" "mozallowfullscreen"="" "webkitallowfullscreen"="" height="600" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    
+    &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+    
+        &lt;script&gt;
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        &lt;/script&gt;
+    
+    &lt;style&gt;html, body {width: 100%;height: 100%;margin: 0;padding: 0;}&lt;/style&gt;
+    &lt;style&gt;#map {position:absolute;top:0;bottom:0;right:0;left:0;}&lt;/style&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://code.jquery.com/jquery-3.7.1.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css&quot;/&gt;
+    
+            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
+            &lt;style&gt;
+                #map_6eb092ff013cd36cff414ec6b1d3767f {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            &lt;/style&gt;
+        
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.min.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.css&quot;/&gt;
+    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.2/leaflet.draw.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.2/leaflet.draw.css&quot;/&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.css&quot;/&gt;
+    &lt;script src=&quot;https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css&quot;/&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/gh/digidem/leaflet-side-by-side@2.0.0/leaflet-side-by-side.min.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+    
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_6eb092ff013cd36cff414ec6b1d3767f&quot; &gt;&lt;/div&gt;
+        
+&lt;/body&gt;
+&lt;script&gt;
+    
+    
+            var map_6eb092ff013cd36cff414ec6b1d3767f = L.map(
+                &quot;map_6eb092ff013cd36cff414ec6b1d3767f&quot;,
+                {
+                    center: [39.4948, -108.5492],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  &quot;zoom&quot;: 12,
+  &quot;zoomControl&quot;: true,
+  &quot;preferCanvas&quot;: false,
+  &quot;drawExport&quot;: false,
+  &quot;layersControl&quot;: true,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_6eb092ff013cd36cff414ec6b1d3767f);
+
+            
+
+        
+    
+            var tile_layer_961ba68452bcfe3a9aab1ab918ef835f = L.tileLayer(
+                &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
+                {
+  &quot;minZoom&quot;: 0,
+  &quot;maxZoom&quot;: 24,
+  &quot;maxNativeZoom&quot;: 24,
+  &quot;noWrap&quot;: false,
+  &quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;,
+  &quot;subdomains&quot;: &quot;abc&quot;,
+  &quot;detectRetina&quot;: false,
+  &quot;tms&quot;: false,
+  &quot;opacity&quot;: 1,
+}
+
+            );
+        
+    
+            tile_layer_961ba68452bcfe3a9aab1ab918ef835f.addTo(map_6eb092ff013cd36cff414ec6b1d3767f);
+        
+    
+            L.control.fullscreen(
+                {
+  &quot;position&quot;: &quot;topleft&quot;,
+  &quot;title&quot;: &quot;Full Screen&quot;,
+  &quot;titleCancel&quot;: &quot;Exit Full Screen&quot;,
+  &quot;forceSeparateButton&quot;: false,
+}
+            ).addTo(map_6eb092ff013cd36cff414ec6b1d3767f);
+        
+    
+            var options = {
+              position: &quot;topleft&quot;,
+              draw: {},
+              edit: {},
+            }
+                // FeatureGroup is to store editable layers.
+                var drawnItems_draw_control_7e807a62a735c02055820ac9f7202102 =
+                    new L.featureGroup().addTo(
+                        map_6eb092ff013cd36cff414ec6b1d3767f
+                    );
+
+            options.edit.featureGroup = drawnItems_draw_control_7e807a62a735c02055820ac9f7202102;
+            var draw_control_7e807a62a735c02055820ac9f7202102 = new L.Control.Draw(
+                options
+            ).addTo( map_6eb092ff013cd36cff414ec6b1d3767f );
+            map_6eb092ff013cd36cff414ec6b1d3767f.on(L.Draw.Event.CREATED, function(e) {
+                var layer = e.layer,
+                    type = e.layerType;
+                var coords = JSON.stringify(layer.toGeoJSON());
+                layer.on('click', function() {
+                    alert(coords);
+                    console.log(coords);
+                });
+                drawnItems_draw_control_7e807a62a735c02055820ac9f7202102.addLayer(layer);
+            });
+            map_6eb092ff013cd36cff414ec6b1d3767f.on('draw:created', function(e) {
+                drawnItems_draw_control_7e807a62a735c02055820ac9f7202102.addLayer(e.layer);
+            });
+
+            
+        
+    
+            var measure_control_59b1b1e965a551af7a6c779fc6513452 = new L.Control.Measure(
+                {
+  &quot;position&quot;: &quot;bottomleft&quot;,
+  &quot;primaryLengthUnit&quot;: &quot;meters&quot;,
+  &quot;secondaryLengthUnit&quot;: &quot;miles&quot;,
+  &quot;primaryAreaUnit&quot;: &quot;sqmeters&quot;,
+  &quot;secondaryAreaUnit&quot;: &quot;acres&quot;,
+});
+            map_6eb092ff013cd36cff414ec6b1d3767f.addControl(measure_control_59b1b1e965a551af7a6c779fc6513452);
+
+            // Workaround for using this plugin with Leaflet&gt;=1.8.0
+            // https://github.com/ljagis/leaflet-measure/issues/171
+            L.Control.Measure.include({
+                _setCaptureMarkerIcon: function () {
+                    // disable autopan
+                    this._captureMarker.options.autoPanOnFocus = false;
+                    // default function
+                    this._captureMarker.setIcon(
+                        L.divIcon({
+                            iconSize: this._map.getSize().multiplyBy(2)
+                        })
+                    );
+                },
+            });
+
+        
+    
+
+            var geocoderOpts_geocoder_b433c6dd0dc430968dc4928639492881 = {
+  &quot;collapsed&quot;: true,
+  &quot;position&quot;: &quot;topleft&quot;,
+  &quot;defaultMarkGeocode&quot;: true,
+  &quot;zoom&quot;: 11,
+  &quot;provider&quot;: &quot;nominatim&quot;,
+  &quot;providerOptions&quot;: {
+},
+};
+
+            // note: geocoder name should start with lowercase
+            var geocoderName_geocoder_b433c6dd0dc430968dc4928639492881 = geocoderOpts_geocoder_b433c6dd0dc430968dc4928639492881[&quot;provider&quot;];
+
+            var customGeocoder_geocoder_b433c6dd0dc430968dc4928639492881 = L.Control.Geocoder[ geocoderName_geocoder_b433c6dd0dc430968dc4928639492881 ](
+                geocoderOpts_geocoder_b433c6dd0dc430968dc4928639492881['providerOptions']
+            );
+            geocoderOpts_geocoder_b433c6dd0dc430968dc4928639492881[&quot;geocoder&quot;] = customGeocoder_geocoder_b433c6dd0dc430968dc4928639492881;
+
+            L.Control.geocoder(
+                geocoderOpts_geocoder_b433c6dd0dc430968dc4928639492881
+            ).on('markgeocode', function(e) {
+                var zoom = geocoderOpts_geocoder_b433c6dd0dc430968dc4928639492881['zoom'] || map_6eb092ff013cd36cff414ec6b1d3767f.getZoom();
+                map_6eb092ff013cd36cff414ec6b1d3767f.setView(e.geocode.center, zoom);
+            }).addTo(map_6eb092ff013cd36cff414ec6b1d3767f);
+
+        
+    
+            map_6eb092ff013cd36cff414ec6b1d3767f.fitBounds(
+                [[39.4948, -108.5492], [39.4948, -108.5492]],
+                {&quot;maxZoom&quot;: 12}
+            );
+        
+    
+            var tile_layer_cda22ed74a6e9400ccf4580f6d511343 = L.tileLayer(
+                &quot;https://titiler.xyz/cog/tiles/WebMercatorQuad/{z}/{x}/{y}@1x?max_zoom=30\u0026max_native_zoom=30\u0026layer_name=Left+Layer\u0026url=https%3A%2F%2Fgithub.com%2Fopengeos%2Fdata%2Freleases%2Fdownload%2Fraster%2FLibya-2023-07-01.tif\u0026bidx=1\u0026bidx=2\u0026bidx=3\u0026rescale=41.0%2C235.0\u0026rescale=45.0%2C216.0\u0026rescale=40.0%2C197.0&quot;,
+                {
+  &quot;minZoom&quot;: 0,
+  &quot;maxZoom&quot;: 30,
+  &quot;maxNativeZoom&quot;: 30,
+  &quot;noWrap&quot;: false,
+  &quot;attribution&quot;: &quot; &quot;,
+  &quot;subdomains&quot;: &quot;abc&quot;,
+  &quot;detectRetina&quot;: false,
+  &quot;tms&quot;: false,
+  &quot;opacity&quot;: 1,
+  &quot;layerName&quot;: &quot;Left Layer&quot;,
+}
+
+            );
+        
+    
+            tile_layer_cda22ed74a6e9400ccf4580f6d511343.addTo(map_6eb092ff013cd36cff414ec6b1d3767f);
+        
+    
+            var tile_layer_0bec170f616c92b96ad9e4df293bb481 = L.tileLayer(
+                &quot;https://titiler.xyz/cog/tiles/WebMercatorQuad/{z}/{x}/{y}@1x?max_zoom=30\u0026max_native_zoom=30\u0026layer_name=Right+Layer\u0026url=https%3A%2F%2Fgithub.com%2Fopengeos%2Fdata%2Freleases%2Fdownload%2Fraster%2FLibya-2023-09-13.tif\u0026bidx=1\u0026bidx=2\u0026bidx=3\u0026rescale=31.0%2C232.0\u0026rescale=24.0%2C215.0\u0026rescale=20.0%2C199.0&quot;,
+                {
+  &quot;minZoom&quot;: 0,
+  &quot;maxZoom&quot;: 30,
+  &quot;maxNativeZoom&quot;: 30,
+  &quot;noWrap&quot;: false,
+  &quot;attribution&quot;: &quot; &quot;,
+  &quot;subdomains&quot;: &quot;abc&quot;,
+  &quot;detectRetina&quot;: false,
+  &quot;tms&quot;: false,
+  &quot;opacity&quot;: 1,
+  &quot;layerName&quot;: &quot;Right Layer&quot;,
+}
+
+            );
+        
+    
+            tile_layer_0bec170f616c92b96ad9e4df293bb481.addTo(map_6eb092ff013cd36cff414ec6b1d3767f);
+        
+    
+            var side_by_side_layers_c3fbf81012c5f4bb9dc17b25c0bfdb02 = L.control.sideBySide(
+                tile_layer_cda22ed74a6e9400ccf4580f6d511343, tile_layer_0bec170f616c92b96ad9e4df293bb481
+            ).addTo(map_6eb092ff013cd36cff414ec6b1d3767f);
+        
+    
+            map_6eb092ff013cd36cff414ec6b1d3767f.fitBounds(
+                [[32.75052266794987, 22.599490732206565], [32.79916288270382, 22.65706605051743]],
+                {}
+            );
+        
+    
+            var layer_control_43eabfe75437252bb34011c15934649c_layers = {
+                base_layers : {
+                    &quot;openstreetmap&quot; : tile_layer_961ba68452bcfe3a9aab1ab918ef835f,
+                },
+                overlays :  {
+                    &quot;Left Layer&quot; : tile_layer_cda22ed74a6e9400ccf4580f6d511343,
+                    &quot;Right Layer&quot; : tile_layer_0bec170f616c92b96ad9e4df293bb481,
+                },
+            };
+            let layer_control_43eabfe75437252bb34011c15934649c = L.control.layers(
+                layer_control_43eabfe75437252bb34011c15934649c_layers.base_layers,
+                layer_control_43eabfe75437252bb34011c15934649c_layers.overlays,
+                {
+  &quot;position&quot;: &quot;topright&quot;,
+  &quot;collapsed&quot;: true,
+  &quot;autoZIndex&quot;: true,
+}
+            ).addTo(map_6eb092ff013cd36cff414ec6b1d3767f);
+
+        
+&lt;/script&gt;
+&lt;/html&gt;" style="border:none !important;" width="100%"></iframe>
 </div>
 </div>
 </div>
@@ -1293,7 +1530,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="February 14, 2025 19:37:03"><span class="timeago" datetime="2025-02-14T19:37:03+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="February 14, 2025 19:37:03">2025-02-14</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="April 3, 2025 03:22:34"><span class="timeago" datetime="2025-04-03T03:22:34+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="April 3, 2025 03:22:34">2025-04-03</span>
   </span>
 
     
@@ -1303,7 +1540,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="February 14, 2025 19:32:23"><span class="timeago" datetime="2025-02-14T19:32:23+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="February 14, 2025 19:32:23">2025-02-14</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="February 10, 2025 19:22:10"><span class="timeago" datetime="2025-02-10T19:22:10+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="February 10, 2025 19:22:10">2025-02-10</span>
   </span>
 
     
