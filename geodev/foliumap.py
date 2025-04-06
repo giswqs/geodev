@@ -113,11 +113,11 @@ class Map(folium.Map):
         if left.startswith("http") or os.path.exists(left):
             layer_left = get_folium_tile_layer(left, **kwargs)
         else:
-            layer_left = folium.TileLayer(left, **kwargs)
+            layer_left = folium.TileLayer(left, overlay=True, **kwargs)
         if right.startswith("http") or os.path.exists(right):
             layer_right = get_folium_tile_layer(right, **kwargs)
         else:
-            layer_right = folium.TileLayer(right, **kwargs)
+            layer_right = folium.TileLayer(right, overlay=True, **kwargs)
 
         sbs = folium.plugins.SideBySideLayers(
             layer_left=layer_left, layer_right=layer_right
