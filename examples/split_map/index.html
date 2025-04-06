@@ -1171,9 +1171,9 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">leafmap.foliumap</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">leafmap</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">geodev.foliumap</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">geodev</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-1">import leafmap.foliumap as leafmap</div>
+<div class="clipboard-copy-txt" id="cell-1">import geodev.foliumap as geodev</div>
 </div>
 </div>
 </div>
@@ -1198,16 +1198,12 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="n">leafmap</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="n">center</span><span class="o">=</span><span class="p">[</span><span class="mf">39.4948</span><span class="p">,</span> <span class="o">-</span><span class="mf">108.5492</span><span class="p">],</span> <span class="n">zoom</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
-<span class="n">url</span> <span class="o">=</span> <span class="s2">"https://github.com/opengeos/data/releases/download/raster/Libya-2023-07-01.tif"</span>
-<span class="n">url2</span> <span class="o">=</span> <span class="s2">"https://github.com/opengeos/data/releases/download/raster/Libya-2023-09-13.tif"</span>
-<span class="n">m</span><span class="o">.</span><span class="n">split_map</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">url2</span><span class="p">)</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="n">geodev</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
+<span class="n">m</span><span class="o">.</span><span class="n">add_split_map</span><span class="p">(</span><span class="n">left</span><span class="o">=</span><span class="s2">"openstreetmap"</span><span class="p">,</span> <span class="n">right</span><span class="o">=</span><span class="s2">"cartodbpositron"</span><span class="p">)</span>
 <span class="n">m</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-2">m = leafmap.Map(height=600, center=[39.4948, -108.5492], zoom=12)
-url = "https://github.com/opengeos/data/releases/download/raster/Libya-2023-07-01.tif"
-url2 = "https://github.com/opengeos/data/releases/download/raster/Libya-2023-09-13.tif"
-m.split_map(url, url2)
+<div class="clipboard-copy-txt" id="cell-2">m = geodev.Map()
+m.add_split_map(left="openstreetmap", right="cartodbpositron")
 m</div>
 </div>
 </div>
@@ -1220,11 +1216,11 @@ m</div>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[2]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
-<iframe "allowfullscreen"="" "mozallowfullscreen"="" "webkitallowfullscreen"="" height="600" srcdoc="&lt;!DOCTYPE html&gt;
+<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><span style="color:#565656">Make this Notebook Trusted to load map: File -&gt; Trust Notebook</span><iframe allowfullscreen="" mozallowfullscreen="" srcdoc='&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
     
-    &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+    &lt;meta http-equiv="content-type" content="text/html; charset=UTF-8" /&gt;
     
         &lt;script&gt;
             L_NO_TOUCH = false;
@@ -1233,21 +1229,21 @@ m</div>
     
     &lt;style&gt;html, body {width: 100%;height: 100%;margin: 0;padding: 0;}&lt;/style&gt;
     &lt;style&gt;#map {position:absolute;top:0;bottom:0;right:0;left:0;}&lt;/style&gt;
-    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;https://code.jquery.com/jquery-3.7.1.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js&quot;&gt;&lt;/script&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css&quot;/&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css&quot;/&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css&quot;/&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css&quot;/&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css&quot;/&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css&quot;/&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"&gt;&lt;/script&gt;
+    &lt;script src="https://code.jquery.com/jquery-3.7.1.min.js"&gt;&lt;/script&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"&gt;&lt;/script&gt;
+    &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/&gt;
+    &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/&gt;
+    &lt;link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/&gt;
+    &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/&gt;
+    &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/&gt;
+    &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/&gt;
     
-            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
-                initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
+            &lt;meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /&gt;
             &lt;style&gt;
-                #map_6eb092ff013cd36cff414ec6b1d3767f {
+                #map_63d7246611f18d703304503eefcfc195 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -1257,244 +1253,281 @@ m</div>
                 .leaflet-container { font-size: 1rem; }
             &lt;/style&gt;
         
-    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.min.js&quot;&gt;&lt;/script&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.css&quot;/&gt;
-    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.2/leaflet.draw.js&quot;&gt;&lt;/script&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.2/leaflet.draw.css&quot;/&gt;
-    &lt;script src=&quot;https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.js&quot;&gt;&lt;/script&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.css&quot;/&gt;
-    &lt;script src=&quot;https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js&quot;&gt;&lt;/script&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css&quot;/&gt;
-    &lt;script src=&quot;https://cdn.jsdelivr.net/gh/digidem/leaflet-side-by-side@2.0.0/leaflet-side-by-side.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src="https://cdn.jsdelivr.net/gh/digidem/leaflet-side-by-side@2.0.0/leaflet-side-by-side.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
     
     
-            &lt;div class=&quot;folium-map&quot; id=&quot;map_6eb092ff013cd36cff414ec6b1d3767f&quot; &gt;&lt;/div&gt;
+            &lt;div class="folium-map" id="map_63d7246611f18d703304503eefcfc195" &gt;&lt;/div&gt;
         
 &lt;/body&gt;
 &lt;script&gt;
     
     
-            var map_6eb092ff013cd36cff414ec6b1d3767f = L.map(
-                &quot;map_6eb092ff013cd36cff414ec6b1d3767f&quot;,
+            var map_63d7246611f18d703304503eefcfc195 = L.map(
+                "map_63d7246611f18d703304503eefcfc195",
                 {
-                    center: [39.4948, -108.5492],
+                    center: [0.0, 0.0],
                     crs: L.CRS.EPSG3857,
                     ...{
-  &quot;zoom&quot;: 12,
-  &quot;zoomControl&quot;: true,
-  &quot;preferCanvas&quot;: false,
-  &quot;drawExport&quot;: false,
-  &quot;layersControl&quot;: true,
+  "zoom": 2,
+  "zoomControl": true,
+  "preferCanvas": false,
 }
 
                 }
             );
-            L.control.scale().addTo(map_6eb092ff013cd36cff414ec6b1d3767f);
 
             
 
         
     
-            var tile_layer_961ba68452bcfe3a9aab1ab918ef835f = L.tileLayer(
-                &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
+            var tile_layer_01a38f56c47e3b8254d3acdb31cdd9c1 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {
-  &quot;minZoom&quot;: 0,
-  &quot;maxZoom&quot;: 24,
-  &quot;maxNativeZoom&quot;: 24,
-  &quot;noWrap&quot;: false,
-  &quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;,
-  &quot;subdomains&quot;: &quot;abc&quot;,
-  &quot;detectRetina&quot;: false,
-  &quot;tms&quot;: false,
-  &quot;opacity&quot;: 1,
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
 }
 
             );
         
     
-            tile_layer_961ba68452bcfe3a9aab1ab918ef835f.addTo(map_6eb092ff013cd36cff414ec6b1d3767f);
+            tile_layer_01a38f56c47e3b8254d3acdb31cdd9c1.addTo(map_63d7246611f18d703304503eefcfc195);
         
     
-            L.control.fullscreen(
+            var tile_layer_d1e55e8056701cbb5ddcd62643524a45 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {
-  &quot;position&quot;: &quot;topleft&quot;,
-  &quot;title&quot;: &quot;Full Screen&quot;,
-  &quot;titleCancel&quot;: &quot;Exit Full Screen&quot;,
-  &quot;forceSeparateButton&quot;: false,
-}
-            ).addTo(map_6eb092ff013cd36cff414ec6b1d3767f);
-        
-    
-            var options = {
-              position: &quot;topleft&quot;,
-              draw: {},
-              edit: {},
-            }
-                // FeatureGroup is to store editable layers.
-                var drawnItems_draw_control_7e807a62a735c02055820ac9f7202102 =
-                    new L.featureGroup().addTo(
-                        map_6eb092ff013cd36cff414ec6b1d3767f
-                    );
-
-            options.edit.featureGroup = drawnItems_draw_control_7e807a62a735c02055820ac9f7202102;
-            var draw_control_7e807a62a735c02055820ac9f7202102 = new L.Control.Draw(
-                options
-            ).addTo( map_6eb092ff013cd36cff414ec6b1d3767f );
-            map_6eb092ff013cd36cff414ec6b1d3767f.on(L.Draw.Event.CREATED, function(e) {
-                var layer = e.layer,
-                    type = e.layerType;
-                var coords = JSON.stringify(layer.toGeoJSON());
-                layer.on('click', function() {
-                    alert(coords);
-                    console.log(coords);
-                });
-                drawnItems_draw_control_7e807a62a735c02055820ac9f7202102.addLayer(layer);
-            });
-            map_6eb092ff013cd36cff414ec6b1d3767f.on('draw:created', function(e) {
-                drawnItems_draw_control_7e807a62a735c02055820ac9f7202102.addLayer(e.layer);
-            });
-
-            
-        
-    
-            var measure_control_59b1b1e965a551af7a6c779fc6513452 = new L.Control.Measure(
-                {
-  &quot;position&quot;: &quot;bottomleft&quot;,
-  &quot;primaryLengthUnit&quot;: &quot;meters&quot;,
-  &quot;secondaryLengthUnit&quot;: &quot;miles&quot;,
-  &quot;primaryAreaUnit&quot;: &quot;sqmeters&quot;,
-  &quot;secondaryAreaUnit&quot;: &quot;acres&quot;,
-});
-            map_6eb092ff013cd36cff414ec6b1d3767f.addControl(measure_control_59b1b1e965a551af7a6c779fc6513452);
-
-            // Workaround for using this plugin with Leaflet&gt;=1.8.0
-            // https://github.com/ljagis/leaflet-measure/issues/171
-            L.Control.Measure.include({
-                _setCaptureMarkerIcon: function () {
-                    // disable autopan
-                    this._captureMarker.options.autoPanOnFocus = false;
-                    // default function
-                    this._captureMarker.setIcon(
-                        L.divIcon({
-                            iconSize: this._map.getSize().multiplyBy(2)
-                        })
-                    );
-                },
-            });
-
-        
-    
-
-            var geocoderOpts_geocoder_b433c6dd0dc430968dc4928639492881 = {
-  &quot;collapsed&quot;: true,
-  &quot;position&quot;: &quot;topleft&quot;,
-  &quot;defaultMarkGeocode&quot;: true,
-  &quot;zoom&quot;: 11,
-  &quot;provider&quot;: &quot;nominatim&quot;,
-  &quot;providerOptions&quot;: {
-},
-};
-
-            // note: geocoder name should start with lowercase
-            var geocoderName_geocoder_b433c6dd0dc430968dc4928639492881 = geocoderOpts_geocoder_b433c6dd0dc430968dc4928639492881[&quot;provider&quot;];
-
-            var customGeocoder_geocoder_b433c6dd0dc430968dc4928639492881 = L.Control.Geocoder[ geocoderName_geocoder_b433c6dd0dc430968dc4928639492881 ](
-                geocoderOpts_geocoder_b433c6dd0dc430968dc4928639492881['providerOptions']
-            );
-            geocoderOpts_geocoder_b433c6dd0dc430968dc4928639492881[&quot;geocoder&quot;] = customGeocoder_geocoder_b433c6dd0dc430968dc4928639492881;
-
-            L.Control.geocoder(
-                geocoderOpts_geocoder_b433c6dd0dc430968dc4928639492881
-            ).on('markgeocode', function(e) {
-                var zoom = geocoderOpts_geocoder_b433c6dd0dc430968dc4928639492881['zoom'] || map_6eb092ff013cd36cff414ec6b1d3767f.getZoom();
-                map_6eb092ff013cd36cff414ec6b1d3767f.setView(e.geocode.center, zoom);
-            }).addTo(map_6eb092ff013cd36cff414ec6b1d3767f);
-
-        
-    
-            map_6eb092ff013cd36cff414ec6b1d3767f.fitBounds(
-                [[39.4948, -108.5492], [39.4948, -108.5492]],
-                {&quot;maxZoom&quot;: 12}
-            );
-        
-    
-            var tile_layer_cda22ed74a6e9400ccf4580f6d511343 = L.tileLayer(
-                &quot;https://titiler.xyz/cog/tiles/WebMercatorQuad/{z}/{x}/{y}@1x?max_zoom=30\u0026max_native_zoom=30\u0026layer_name=Left+Layer\u0026url=https%3A%2F%2Fgithub.com%2Fopengeos%2Fdata%2Freleases%2Fdownload%2Fraster%2FLibya-2023-07-01.tif\u0026bidx=1\u0026bidx=2\u0026bidx=3\u0026rescale=41.0%2C235.0\u0026rescale=45.0%2C216.0\u0026rescale=40.0%2C197.0&quot;,
-                {
-  &quot;minZoom&quot;: 0,
-  &quot;maxZoom&quot;: 30,
-  &quot;maxNativeZoom&quot;: 30,
-  &quot;noWrap&quot;: false,
-  &quot;attribution&quot;: &quot; &quot;,
-  &quot;subdomains&quot;: &quot;abc&quot;,
-  &quot;detectRetina&quot;: false,
-  &quot;tms&quot;: false,
-  &quot;opacity&quot;: 1,
-  &quot;layerName&quot;: &quot;Left Layer&quot;,
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
 }
 
             );
         
     
-            tile_layer_cda22ed74a6e9400ccf4580f6d511343.addTo(map_6eb092ff013cd36cff414ec6b1d3767f);
+            tile_layer_d1e55e8056701cbb5ddcd62643524a45.addTo(map_63d7246611f18d703304503eefcfc195);
         
     
-            var tile_layer_0bec170f616c92b96ad9e4df293bb481 = L.tileLayer(
-                &quot;https://titiler.xyz/cog/tiles/WebMercatorQuad/{z}/{x}/{y}@1x?max_zoom=30\u0026max_native_zoom=30\u0026layer_name=Right+Layer\u0026url=https%3A%2F%2Fgithub.com%2Fopengeos%2Fdata%2Freleases%2Fdownload%2Fraster%2FLibya-2023-09-13.tif\u0026bidx=1\u0026bidx=2\u0026bidx=3\u0026rescale=31.0%2C232.0\u0026rescale=24.0%2C215.0\u0026rescale=20.0%2C199.0&quot;,
+            var tile_layer_1eeafdd7e2ede426fc9ea5b42cc39759 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
-  &quot;minZoom&quot;: 0,
-  &quot;maxZoom&quot;: 30,
-  &quot;maxNativeZoom&quot;: 30,
-  &quot;noWrap&quot;: false,
-  &quot;attribution&quot;: &quot; &quot;,
-  &quot;subdomains&quot;: &quot;abc&quot;,
-  &quot;detectRetina&quot;: false,
-  &quot;tms&quot;: false,
-  &quot;opacity&quot;: 1,
-  &quot;layerName&quot;: &quot;Right Layer&quot;,
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
 }
 
             );
         
     
-            tile_layer_0bec170f616c92b96ad9e4df293bb481.addTo(map_6eb092ff013cd36cff414ec6b1d3767f);
+            tile_layer_1eeafdd7e2ede426fc9ea5b42cc39759.addTo(map_63d7246611f18d703304503eefcfc195);
         
     
-            var side_by_side_layers_c3fbf81012c5f4bb9dc17b25c0bfdb02 = L.control.sideBySide(
-                tile_layer_cda22ed74a6e9400ccf4580f6d511343, tile_layer_0bec170f616c92b96ad9e4df293bb481
-            ).addTo(map_6eb092ff013cd36cff414ec6b1d3767f);
-        
-    
-            map_6eb092ff013cd36cff414ec6b1d3767f.fitBounds(
-                [[32.75052266794987, 22.599490732206565], [32.79916288270382, 22.65706605051743]],
-                {}
-            );
-        
-    
-            var layer_control_43eabfe75437252bb34011c15934649c_layers = {
-                base_layers : {
-                    &quot;openstreetmap&quot; : tile_layer_961ba68452bcfe3a9aab1ab918ef835f,
-                },
-                overlays :  {
-                    &quot;Left Layer&quot; : tile_layer_cda22ed74a6e9400ccf4580f6d511343,
-                    &quot;Right Layer&quot; : tile_layer_0bec170f616c92b96ad9e4df293bb481,
-                },
-            };
-            let layer_control_43eabfe75437252bb34011c15934649c = L.control.layers(
-                layer_control_43eabfe75437252bb34011c15934649c_layers.base_layers,
-                layer_control_43eabfe75437252bb34011c15934649c_layers.overlays,
-                {
-  &quot;position&quot;: &quot;topright&quot;,
-  &quot;collapsed&quot;: true,
-  &quot;autoZIndex&quot;: true,
-}
-            ).addTo(map_6eb092ff013cd36cff414ec6b1d3767f);
-
+            var side_by_side_layers_463c71764c71793549e728c9863c9d57 = L.control.sideBySide(
+                tile_layer_d1e55e8056701cbb5ddcd62643524a45, tile_layer_1eeafdd7e2ede426fc9ea5b42cc39759
+            ).addTo(map_63d7246611f18d703304503eefcfc195);
         
 &lt;/script&gt;
-&lt;/html&gt;" style="border:none !important;" width="100%"></iframe>
+&lt;/html&gt;' style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" webkitallowfullscreen=""></iframe></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-3">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="n">geodev</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">center</span><span class="o">=</span><span class="p">[</span><span class="mf">32.7748</span><span class="p">,</span> <span class="mf">22.6282</span><span class="p">],</span> <span class="n">zoom</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
+<span class="n">left</span> <span class="o">=</span> <span class="s2">"https://github.com/opengeos/data/releases/download/raster/Libya-2023-07-01.tif"</span>
+<span class="n">right</span> <span class="o">=</span> <span class="s2">"https://github.com/opengeos/data/releases/download/raster/Libya-2023-09-13.tif"</span>
+<span class="n">m</span><span class="o">.</span><span class="n">add_split_map</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">)</span>
+<span class="n">m</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-3">m = geodev.Map(center=[32.7748, 22.6282], zoom=13)
+left = "https://github.com/opengeos/data/releases/download/raster/Libya-2023-07-01.tif"
+right = "https://github.com/opengeos/data/releases/download/raster/Libya-2023-09-13.tif"
+m.add_split_map(left, right)
+m</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><span style="color:#565656">Make this Notebook Trusted to load map: File -&gt; Trust Notebook</span><iframe allowfullscreen="" mozallowfullscreen="" srcdoc='&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    
+    &lt;meta http-equiv="content-type" content="text/html; charset=UTF-8" /&gt;
+    
+        &lt;script&gt;
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        &lt;/script&gt;
+    
+    &lt;style&gt;html, body {width: 100%;height: 100%;margin: 0;padding: 0;}&lt;/style&gt;
+    &lt;style&gt;#map {position:absolute;top:0;bottom:0;right:0;left:0;}&lt;/style&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"&gt;&lt;/script&gt;
+    &lt;script src="https://code.jquery.com/jquery-3.7.1.min.js"&gt;&lt;/script&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"&gt;&lt;/script&gt;
+    &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/&gt;
+    &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/&gt;
+    &lt;link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/&gt;
+    &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/&gt;
+    &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/&gt;
+    &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/&gt;
+    
+            &lt;meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /&gt;
+            &lt;style&gt;
+                #map_1fb50ac80467f786f5ce1dabc54e4095 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            &lt;/style&gt;
+        
+    &lt;script src="https://cdn.jsdelivr.net/gh/digidem/leaflet-side-by-side@2.0.0/leaflet-side-by-side.min.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+    
+            &lt;div class="folium-map" id="map_1fb50ac80467f786f5ce1dabc54e4095" &gt;&lt;/div&gt;
+        
+&lt;/body&gt;
+&lt;script&gt;
+    
+    
+            var map_1fb50ac80467f786f5ce1dabc54e4095 = L.map(
+                "map_1fb50ac80467f786f5ce1dabc54e4095",
+                {
+                    center: [32.7748, 22.6282],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_0e8424f5770e64014528af185a1bf840 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_0e8424f5770e64014528af185a1bf840.addTo(map_1fb50ac80467f786f5ce1dabc54e4095);
+        
+    
+            var tile_layer_20cdff0913cbded0a35e046a5c31f90d = L.tileLayer(
+                "http://127.0.0.1:35657/api/tiles/{z}/{x}/{y}.png?\u0026filename=%2Fvsicurl%3Furl%3Dhttps%253A%252F%252Fgithub.com%252Fopengeos%252Fdata%252Freleases%252Fdownload%252Fraster%252FLibya-2023-07-01.tif%26use_head%3Dno%26list_dir%3Dno",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Raster file served by \u003ca href=\u0027https://github.com/banesullivan/localtileserver\u0027 target=\u0027_blank\u0027\u003elocaltileserver\u003c/a\u003e.",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+  "bounds": [[32.750523, 22.599491], [32.799163, 22.657066]],
+}
+
+            );
+        
+    
+            tile_layer_20cdff0913cbded0a35e046a5c31f90d.addTo(map_1fb50ac80467f786f5ce1dabc54e4095);
+        
+    
+            var tile_layer_306bb24b04c46395e9995e3c8b7fcd1e = L.tileLayer(
+                "http://127.0.0.1:35657/api/tiles/{z}/{x}/{y}.png?\u0026filename=%2Fvsicurl%3Furl%3Dhttps%253A%252F%252Fgithub.com%252Fopengeos%252Fdata%252Freleases%252Fdownload%252Fraster%252FLibya-2023-09-13.tif%26use_head%3Dno%26list_dir%3Dno",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Raster file served by \u003ca href=\u0027https://github.com/banesullivan/localtileserver\u0027 target=\u0027_blank\u0027\u003elocaltileserver\u003c/a\u003e.",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+  "bounds": [[32.750523, 22.599491], [32.799163, 22.657066]],
+}
+
+            );
+        
+    
+            tile_layer_306bb24b04c46395e9995e3c8b7fcd1e.addTo(map_1fb50ac80467f786f5ce1dabc54e4095);
+        
+    
+            var side_by_side_layers_64017780d282f8a8073d83d570243f49 = L.control.sideBySide(
+                tile_layer_20cdff0913cbded0a35e046a5c31f90d, tile_layer_306bb24b04c46395e9995e3c8b7fcd1e
+            ).addTo(map_1fb50ac80467f786f5ce1dabc54e4095);
+        
+&lt;/script&gt;
+&lt;/html&gt;' style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" webkitallowfullscreen=""></iframe></div></div>
 </div>
 </div>
 </div>
@@ -1530,7 +1563,7 @@ m</div>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="April 3, 2025 03:22:34"><span class="timeago" datetime="2025-04-03T03:22:34+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="April 3, 2025 03:22:34">2025-04-03</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="April 6, 2025 13:18:46"><span class="timeago" datetime="2025-04-06T13:18:46+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="April 6, 2025 13:18:46">2025-04-06</span>
   </span>
 
     
