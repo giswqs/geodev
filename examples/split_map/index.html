@@ -1199,11 +1199,13 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </clipboard-copy>
 </div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="n">geodev</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
-<span class="n">m</span><span class="o">.</span><span class="n">add_split_map</span><span class="p">(</span><span class="n">left</span><span class="o">=</span><span class="s2">"openstreetmap"</span><span class="p">,</span> <span class="n">right</span><span class="o">=</span><span class="s2">"cartodbpositron"</span><span class="p">)</span>
+<span class="n">m</span><span class="o">.</span><span class="n">add_split_map</span><span class="p">(</span><span class="n">left</span><span class="o">=</span><span class="s2">"openstreetmap"</span><span class="p">,</span> <span class="n">right</span><span class="o">=</span><span class="s2">"Esri.WorldImagery"</span><span class="p">)</span>
+<span class="n">m</span><span class="o">.</span><span class="n">add_layer_control</span><span class="p">()</span>
 <span class="n">m</span>
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-2">m = geodev.Map()
-m.add_split_map(left="openstreetmap", right="cartodbpositron")
+m.add_split_map(left="openstreetmap", right="Esri.WorldImagery")
+m.add_layer_control()
 m</div>
 </div>
 </div>
@@ -1243,7 +1245,7 @@ m</div>
             &lt;meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /&gt;
             &lt;style&gt;
-                #map_63d7246611f18d703304503eefcfc195 {
+                #map_54f299c41fedbb3be93a9552d0d08b71 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -1258,14 +1260,14 @@ m</div>
 &lt;body&gt;
     
     
-            &lt;div class="folium-map" id="map_63d7246611f18d703304503eefcfc195" &gt;&lt;/div&gt;
+            &lt;div class="folium-map" id="map_54f299c41fedbb3be93a9552d0d08b71" &gt;&lt;/div&gt;
         
 &lt;/body&gt;
 &lt;script&gt;
     
     
-            var map_63d7246611f18d703304503eefcfc195 = L.map(
-                "map_63d7246611f18d703304503eefcfc195",
+            var map_54f299c41fedbb3be93a9552d0d08b71 = L.map(
+                "map_54f299c41fedbb3be93a9552d0d08b71",
                 {
                     center: [0.0, 0.0],
                     crs: L.CRS.EPSG3857,
@@ -1282,7 +1284,7 @@ m</div>
 
         
     
-            var tile_layer_01a38f56c47e3b8254d3acdb31cdd9c1 = L.tileLayer(
+            var tile_layer_e4846d356b3c39eb6fade5e667756229 = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {
   "minZoom": 0,
@@ -1299,10 +1301,10 @@ m</div>
             );
         
     
-            tile_layer_01a38f56c47e3b8254d3acdb31cdd9c1.addTo(map_63d7246611f18d703304503eefcfc195);
+            tile_layer_e4846d356b3c39eb6fade5e667756229.addTo(map_54f299c41fedbb3be93a9552d0d08b71);
         
     
-            var tile_layer_d1e55e8056701cbb5ddcd62643524a45 = L.tileLayer(
+            var tile_layer_0dbdba90dc5cefb0079e52c725b0b530 = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {
   "minZoom": 0,
@@ -1319,18 +1321,18 @@ m</div>
             );
         
     
-            tile_layer_d1e55e8056701cbb5ddcd62643524a45.addTo(map_63d7246611f18d703304503eefcfc195);
+            tile_layer_0dbdba90dc5cefb0079e52c725b0b530.addTo(map_54f299c41fedbb3be93a9552d0d08b71);
         
     
-            var tile_layer_1eeafdd7e2ede426fc9ea5b42cc39759 = L.tileLayer(
-                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+            var tile_layer_220a67e519623daa84380b5d85e9bf8a = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
-  "maxZoom": 20,
-  "maxNativeZoom": 20,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
   "noWrap": false,
-  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
-  "subdomains": "abcd",
+  "attribution": "Tiles \u0026copy; Esri \u0026mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community",
+  "subdomains": "abc",
   "detectRetina": false,
   "tms": false,
   "opacity": 1,
@@ -1339,12 +1341,33 @@ m</div>
             );
         
     
-            tile_layer_1eeafdd7e2ede426fc9ea5b42cc39759.addTo(map_63d7246611f18d703304503eefcfc195);
+            tile_layer_220a67e519623daa84380b5d85e9bf8a.addTo(map_54f299c41fedbb3be93a9552d0d08b71);
         
     
-            var side_by_side_layers_463c71764c71793549e728c9863c9d57 = L.control.sideBySide(
-                tile_layer_d1e55e8056701cbb5ddcd62643524a45, tile_layer_1eeafdd7e2ede426fc9ea5b42cc39759
-            ).addTo(map_63d7246611f18d703304503eefcfc195);
+            var side_by_side_layers_06e9ac564dd0900b68d7791f3187e1da = L.control.sideBySide(
+                tile_layer_0dbdba90dc5cefb0079e52c725b0b530, tile_layer_220a67e519623daa84380b5d85e9bf8a
+            ).addTo(map_54f299c41fedbb3be93a9552d0d08b71);
+        
+    
+            var layer_control_9d4f77661bbaf9bddf8d12a2a12b2d06_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_e4846d356b3c39eb6fade5e667756229,
+                },
+                overlays :  {
+                    "openstreetmap" : tile_layer_0dbdba90dc5cefb0079e52c725b0b530,
+                    "esriworldimagery" : tile_layer_220a67e519623daa84380b5d85e9bf8a,
+                },
+            };
+            let layer_control_9d4f77661bbaf9bddf8d12a2a12b2d06 = L.control.layers(
+                layer_control_9d4f77661bbaf9bddf8d12a2a12b2d06_layers.base_layers,
+                layer_control_9d4f77661bbaf9bddf8d12a2a12b2d06_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_54f299c41fedbb3be93a9552d0d08b71);
+
         
 &lt;/script&gt;
 &lt;/html&gt;' style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" webkitallowfullscreen=""></iframe></div></div>
@@ -1421,7 +1444,7 @@ m</div>
             &lt;meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /&gt;
             &lt;style&gt;
-                #map_1fb50ac80467f786f5ce1dabc54e4095 {
+                #map_860561ff0c6350ff87ab22ca51af5893 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -1436,14 +1459,14 @@ m</div>
 &lt;body&gt;
     
     
-            &lt;div class="folium-map" id="map_1fb50ac80467f786f5ce1dabc54e4095" &gt;&lt;/div&gt;
+            &lt;div class="folium-map" id="map_860561ff0c6350ff87ab22ca51af5893" &gt;&lt;/div&gt;
         
 &lt;/body&gt;
 &lt;script&gt;
     
     
-            var map_1fb50ac80467f786f5ce1dabc54e4095 = L.map(
-                "map_1fb50ac80467f786f5ce1dabc54e4095",
+            var map_860561ff0c6350ff87ab22ca51af5893 = L.map(
+                "map_860561ff0c6350ff87ab22ca51af5893",
                 {
                     center: [32.7748, 22.6282],
                     crs: L.CRS.EPSG3857,
@@ -1460,7 +1483,7 @@ m</div>
 
         
     
-            var tile_layer_0e8424f5770e64014528af185a1bf840 = L.tileLayer(
+            var tile_layer_5dba9f40da74abd3781fbd71a2861aa0 = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {
   "minZoom": 0,
@@ -1477,11 +1500,11 @@ m</div>
             );
         
     
-            tile_layer_0e8424f5770e64014528af185a1bf840.addTo(map_1fb50ac80467f786f5ce1dabc54e4095);
+            tile_layer_5dba9f40da74abd3781fbd71a2861aa0.addTo(map_860561ff0c6350ff87ab22ca51af5893);
         
     
-            var tile_layer_20cdff0913cbded0a35e046a5c31f90d = L.tileLayer(
-                "http://127.0.0.1:35657/api/tiles/{z}/{x}/{y}.png?\u0026filename=%2Fvsicurl%3Furl%3Dhttps%253A%252F%252Fgithub.com%252Fopengeos%252Fdata%252Freleases%252Fdownload%252Fraster%252FLibya-2023-07-01.tif%26use_head%3Dno%26list_dir%3Dno",
+            var tile_layer_aa2f46971b73712e92011813075e1652 = L.tileLayer(
+                "http://127.0.0.1:41397/api/tiles/{z}/{x}/{y}.png?\u0026filename=%2Fvsicurl%3Furl%3Dhttps%253A%252F%252Fgithub.com%252Fopengeos%252Fdata%252Freleases%252Fdownload%252Fraster%252FLibya-2023-07-01.tif%26use_head%3Dno%26list_dir%3Dno",
                 {
   "minZoom": 0,
   "maxZoom": 18,
@@ -1498,11 +1521,11 @@ m</div>
             );
         
     
-            tile_layer_20cdff0913cbded0a35e046a5c31f90d.addTo(map_1fb50ac80467f786f5ce1dabc54e4095);
+            tile_layer_aa2f46971b73712e92011813075e1652.addTo(map_860561ff0c6350ff87ab22ca51af5893);
         
     
-            var tile_layer_306bb24b04c46395e9995e3c8b7fcd1e = L.tileLayer(
-                "http://127.0.0.1:35657/api/tiles/{z}/{x}/{y}.png?\u0026filename=%2Fvsicurl%3Furl%3Dhttps%253A%252F%252Fgithub.com%252Fopengeos%252Fdata%252Freleases%252Fdownload%252Fraster%252FLibya-2023-09-13.tif%26use_head%3Dno%26list_dir%3Dno",
+            var tile_layer_1ebc3f44881c46ff2fab4e6cdcf0ba57 = L.tileLayer(
+                "http://127.0.0.1:41397/api/tiles/{z}/{x}/{y}.png?\u0026filename=%2Fvsicurl%3Furl%3Dhttps%253A%252F%252Fgithub.com%252Fopengeos%252Fdata%252Freleases%252Fdownload%252Fraster%252FLibya-2023-09-13.tif%26use_head%3Dno%26list_dir%3Dno",
                 {
   "minZoom": 0,
   "maxZoom": 18,
@@ -1519,12 +1542,12 @@ m</div>
             );
         
     
-            tile_layer_306bb24b04c46395e9995e3c8b7fcd1e.addTo(map_1fb50ac80467f786f5ce1dabc54e4095);
+            tile_layer_1ebc3f44881c46ff2fab4e6cdcf0ba57.addTo(map_860561ff0c6350ff87ab22ca51af5893);
         
     
-            var side_by_side_layers_64017780d282f8a8073d83d570243f49 = L.control.sideBySide(
-                tile_layer_20cdff0913cbded0a35e046a5c31f90d, tile_layer_306bb24b04c46395e9995e3c8b7fcd1e
-            ).addTo(map_1fb50ac80467f786f5ce1dabc54e4095);
+            var side_by_side_layers_dfb3f07db31bc4ae62a0f38adbc925df = L.control.sideBySide(
+                tile_layer_aa2f46971b73712e92011813075e1652, tile_layer_1ebc3f44881c46ff2fab4e6cdcf0ba57
+            ).addTo(map_860561ff0c6350ff87ab22ca51af5893);
         
 &lt;/script&gt;
 &lt;/html&gt;' style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" webkitallowfullscreen=""></iframe></div></div>
@@ -1563,7 +1586,7 @@ m</div>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="April 6, 2025 13:18:46"><span class="timeago" datetime="2025-04-06T13:18:46+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="April 6, 2025 13:18:46">2025-04-06</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="April 6, 2025 14:00:17"><span class="timeago" datetime="2025-04-06T14:00:17+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="April 6, 2025 14:00:17">2025-04-06</span>
   </span>
 
     
