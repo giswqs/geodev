@@ -1,5 +1,6 @@
 """This module provides a custom Map class that extends folium.Map"""
 
+import os
 import folium
 import folium.plugins
 
@@ -101,22 +102,22 @@ class Map(folium.Map):
         folium.LayerControl().add_to(self)
 
     def add_split_map(self, left="openstreetmap", right="cartodbpositron", **kwargs):
+        """Adds a split map to the map.
 
-        # map_types = {
-        #     "ROADMAP": "m",
-        #     "SATELLITE": "s",
-        #     "HYBRID": "y",
-        #     "TERRAIN": "p",
-        # }
+        Args:
+            left (str, optional): The tile layer for the left side of the split map. Defaults to "openstreetmap".
+            right (str, optional): The tile layer for the right side of the split map. Defaults to "cartodbpositron".
+        """
+        from localtileserver import get_folium_tile_layer
 
-        # map_type = map_types[map_type.upper()]
-
-        # url = (
-        #     f"https://mt1.google.com/vt/lyrs={map_type.lower()}&x={{x}}&y={{y}}&z={{z}}"
-        # )
-
-        layer_right = folium.TileLayer(left, **kwargs)
-        layer_left = folium.TileLayer(right, **kwargs)
+        if left.startswith("http") or os.path.exists(left):
+            layer_left = get_folium_tile_layer(left, **kwargs)
+        else:
+            layer_left = folium.TileLayer(left, **kwargs)
+        if right.startswith("http") or os.path.exists(right):
+            layer_right = get_folium_tile_layer(right, **kwargs)
+        else:
+            layer_right = folium.TileLayer(right, **kwargs)
 
         sbs = folium.plugins.SideBySideLayers(
             layer_left=layer_left, layer_right=layer_right
