@@ -2,7 +2,6 @@
 
 """Tests for `geodev` package."""
 
-
 import unittest
 
 from geodev import geodev
